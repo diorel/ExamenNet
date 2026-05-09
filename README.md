@@ -1,4 +1,4 @@
-# Payment Request — Guia de Ejecucion
+ok# Payment Request — Guia de Ejecucion
 
 ---
 
@@ -21,6 +21,69 @@
 | EntityFrameworkCore.Design | 8.0.0 |
 | Swashbuckle.AspNetCore (Swagger) | 6.5.0 |
 
+## Configuración de la Cadena de Conexión SQL Server
+
+Antes de ejecutar el proyecto es necesario actualizar las credenciales de conexión a SQL Server en el archivo:
+
+```text
+appsettings.json
+```
+
+Actualmente el proyecto incluye una configuración de ejemplo:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=LAPTOP-HGP68D9D\\SQLEXPRESS;Database=Pagos;User Id=admin;Password=12345678;TrustServerCertificate=True;MultipleActiveResultSets=true"
+}
+```
+
+Cada usuario debe reemplazar estos valores por las credenciales correspondientes a su propio entorno local de SQL Server.
+
+## Datos que deben modificarse
+
+| Campo | Descripción |
+|---|---|
+| Server | Nombre de la instancia local de SQL Server |
+| Database | Nombre de la base de datos |
+| User Id | Usuario configurado en SQL Server |
+| Password | Contraseña del usuario SQL |
+
+---
+
+## Ejemplo de configuración personalizada
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=MI_SERVIDOR\\SQLEXPRESS;Database=Pagos;User Id=miUsuario;Password=miPassword;TrustServerCertificate=True;MultipleActiveResultSets=true"
+}
+```
+
+---
+
+## Ejemplo del nombre del servidor local
+
+Para identificar el nombre de tu servidor SQL Server puedes abrir:
+
+- SQL Server Management Studio (SSMS)
+
+y verificar el nombre de la instancia, por ejemplo:
+
+```text
+LAPTOP-HGP68D9D\SQLEXPRESS
+```
+
+---
+
+## Importante
+
+Asegúrate de que:
+
+- SQL Server esté en ejecución.
+- El usuario tenga permisos sobre la base de datos.
+- El modo de autenticación SQL Server esté habilitado si utilizas `User Id` y `Password`.
+- La base de datos `Pagos` exista o se cree mediante las migraciones de Entity Framework Core.
+
+
 ### Comandos para levantar
 
 ```bash
@@ -39,6 +102,7 @@ dotnet run                            # Iniciar la API
 | Base de datos | `Pagos` |
 | Login | `admin` |
 | Password | `12345678` |
+
 
 **Comandos a ejecutar en orden:**
 
