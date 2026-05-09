@@ -1,27 +1,100 @@
 # PaymentFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Este proyecto fue generado con Angular CLI versión 16.2.0.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Servidor de Desarrollo
 
-## Code scaffolding
+Ejecuta:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+ng serve
+```
 
-## Build
+para iniciar un servidor de desarrollo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Después navega a:
 
-## Running unit tests
+```text
+http://localhost:4200/
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+La aplicación se recargará automáticamente cuando modifiques cualquiera de los archivos fuente.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Generación de Código (Scaffolding)
 
-## Further help
+Ejecuta:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng generate component nombre-componente
+```
+
+para generar un nuevo componente.
+
+También puedes utilizar:
+
+```bash
+ng generate directive|pipe|service|class|guard|interface|enum|module
+```
+
+---
+
+# Compilación del Proyecto
+
+Ejecuta:
+
+```bash
+ng build
+```
+
+para compilar el proyecto.
+
+Los archivos generados se almacenarán en el directorio:
+
+```text
+dist/
+```
+
+---
+
+# Ejecución de Pruebas Unitarias
+
+Ejecuta:
+
+```bash
+ng test
+```
+
+para ejecutar las pruebas unitarias utilizando Karma.
+
+---
+
+# Ejecución de Pruebas End-to-End (E2E)
+
+Ejecuta:
+
+```bash
+ng e2e
+```
+
+para ejecutar pruebas end-to-end utilizando la plataforma de pruebas de tu elección.
+
+Para utilizar este comando primero debes instalar un paquete que implemente capacidades de pruebas E2E.
+
+---
+
+# Ayuda Adicional
+
+Para obtener más ayuda sobre Angular CLI ejecuta:
+
+```bash
+ng help
+```
+
+o consulta la documentación oficial:
+
+- Angular CLI Overview
+- Angular CLI Command Reference
