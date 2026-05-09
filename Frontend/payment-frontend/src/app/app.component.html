@@ -1,0 +1,11 @@
+<main class="container">
+  <h1>Solicitudes de Pago</h1>
+  <section class="form-section">
+    <h2>Nueva Solicitud</h2>
+    <app-payment-form (paymentCreated)="onPaymentCreated()"></app-payment-form>
+  </section>
+  <section class="list-section">
+    <h2>Solicitudes Registradas</h2>
+    <app-payment-list></app-payment-list>
+  </section>
+</main>

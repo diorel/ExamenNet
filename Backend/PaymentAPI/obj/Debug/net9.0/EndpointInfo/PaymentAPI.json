@@ -1,0 +1,85 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PaymentAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/payment-requests": {
+      "post": {
+        "tags": [
+          "PaymentRequests"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "PaymentRequests"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreatePaymentRequestDto": {
+        "required": [
+          "amount",
+          "currency",
+          "requesterName"
+        ],
+        "type": "object",
+        "properties": {
+          "requesterName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "amount": {
+            "minimum": 0.01,
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "maxLength": 3,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 200,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

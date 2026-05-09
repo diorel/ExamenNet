@@ -1,0 +1,112 @@
+/* Global reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #222;
+  background-color: #f0f4f8;
+  line-height: 1.5;
+}
+
+/* Inputs, selects, textareas */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.15);
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: #c0392b;
+}
+
+/* Buttons */
+button {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #2980b9;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2471a3;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success banner */
+.success-banner {
+  background-color: #d5f5e3;
+  border: 1px solid #2ecc71;
+  color: #1e8449;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Error banner */
+.error-banner {
+  background-color: #fadbd8;
+  border: 1px solid #e74c3c;
+  color: #c0392b;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #cfd8dc;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+th {
+  background-color: #ecf0f1;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+tbody tr:hover {
+  background-color: #f5f8fa;
+}
