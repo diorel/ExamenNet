@@ -31,6 +31,23 @@ dotnet ef database update             # Crear tabla en SQL Server
 dotnet run                            # Iniciar la API
 ```
 
+**Datos de conexion:**
+
+| Parametro | Valor |
+|-----------|-------|
+| Servidor | `LAPTOP-HGP68D9D\SQLEXPRESS` |
+| Base de datos | `Pagos` |
+| Login | `admin` |
+| Password | `12345678` |
+
+**Comandos a ejecutar en orden:**
+
+| Orden | Comando | Descripcion |
+|-------|---------|-------------|
+| 1 | `dotnet ef migrations add InitialCreate` | Genera los archivos de migracion en la carpeta `Migrations/` |
+| 2 | `dotnet ef database update` | Se conecta a SQL Server y crea la tabla `PaymentRequests` en la base de datos `Pagos` |
+
+
 ### URLs disponibles
 
 | Recurso | URL |
